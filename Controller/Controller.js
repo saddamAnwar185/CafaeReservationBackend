@@ -98,11 +98,11 @@ const handleLogin = async (req, res) => {
 
     // Token creation (optional)
     const token = setUser(user); // only if you use JWT
-    res.cookie("uid", token, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
-    });
+   res.cookie("uid", token, {
+  httpOnly: true,
+  secure: process.env.NODE_ENV === 'production', // HTTPS required in production
+  sameSite: 'none', // allow cross-origin
+});
 
     return res.status(200).json({
       success: true,
