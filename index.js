@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true })); // Parses URL-encoded bodies
 app.use(bodyParser.json()); // Parses JSON (redundant with express.json but ok if needed)
 app.use(cookieParser()); // Parses cookies from the request headers
 app.use(cors({
-  origin: 'https://cafae-saddam-anwars-projects.vercel.app',
+  origin: 'https://saddamanwar185.github.io',
   credentials: true,
   methods: ['POST', 'GET', 'DELETE', 'PUT', 'PATCH']
 }));
